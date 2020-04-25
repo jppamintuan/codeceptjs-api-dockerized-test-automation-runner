@@ -1,0 +1,7 @@
+version: '2'
+services:
+  codeceptjs-api-dockerized-test:
+    container_name: codeceptjs-rest-api-test
+    image: jppamintuan/codeceptjs-api-dockerized-test
+    volumes:
+      - ./report_container:/source/reports
