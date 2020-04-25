@@ -6,7 +6,7 @@ pipeline{
 				sh "docker pull jppamintuan/codeceptjs-api-dockerized-test:latest"
 			}
 		}
-		stage("Start Grid & Run Test"){
+		stage("Run Test"){
 			steps{
 				sh "docker-compose -f docker-compose.yaml up --exit-code-from codeceptjs-api-dockerized-test --no-color"
 			}
