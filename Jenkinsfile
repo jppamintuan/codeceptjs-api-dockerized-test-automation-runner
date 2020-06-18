@@ -15,7 +15,9 @@ pipeline{
 	post{
 		always{
 			archiveArtifacts artifacts: 'report_container/**'
+			zip zipFile: 'Report.zip', archive: true, dir: 'archive'
 			sh "docker-compose down"
+			archiveArtifacts artifacts: 'Report.zip'
 		}
 	}
 }
